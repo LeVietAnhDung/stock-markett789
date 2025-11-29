@@ -1,0 +1,70 @@
+ <app-stock-list-2></app-stock-list-2>  
+
+ 
+  <!-- <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" opened fixedInViewport>
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['/stocks/list-2']" (click)="sidenav.toggle()">
+        <mat-icon matListItemIcon>home</mat-icon> Home
+      </a>
+      <a mat-list-item [routerLink]="['/stocks/list']" (click)="sidenav.toggle()">
+        Stock
+      </a>
+      <a mat-list-item [routerLink]="['/stocks/create']" (click)="sidenav.toggle()">
+        Create Stock Demo
+      </a>
+      <a mat-list-item [routerLink]="['create-reactive']" (click)="sidenav.toggle()">
+        Create Stock Reactive
+      </a>
+      <a mat-list-item [routerLink]="['/stocks/post-data']" (click)="sidenav.toggle()">
+        Post data
+      </a>
+      <a mat-list-item [routerLink]="['/stocks/get-data']" (click)="sidenav.toggle()">
+        Get data
+      </a>
+      <a mat-list-item (click)="sidenav.toggle()">
+        <mat-icon>close</mat-icon> Close
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="nav-height">
+      <button mat-icon-button (click)="openLeftSide()" aria-label="Toggle sidenav">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1>Stock Market</h1>
+      <span class="menu-spacer" style="width: 100px;"></span>
+      <div>
+        <a mat-button [routerLink]="['/stocks/list-2']" routerLinkActive="active-link">
+          <mat-icon mat-list-icon>home</mat-icon> Home
+        </a>
+        <a mat-button [routerLink]="['/login']" routerLinkActive="active-link">
+          <mat-icon>person</mat-icon> Login
+        </a>
+        <a mat-button [routerLink]="['/register']" routerLinkActive="active-link">
+          <mat-icon>person</mat-icon> Register
+        </a>
+      </div>
+    </mat-toolbar>
+
+    <div
+      style="
+        height: 90vh;
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+      "
+      [ngClass]="{
+        'content-move-left': isOpened,
+        'content-move-right': isOpened
+      }"
+    >
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>    
+
+    
+-->

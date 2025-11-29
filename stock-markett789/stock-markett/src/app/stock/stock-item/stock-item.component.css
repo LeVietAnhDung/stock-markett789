@@ -1,0 +1,214 @@
+/* Container chính */
+.stock-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Card hiển thị stock */
+.stock-item {
+  width: 280px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.stock-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Thông tin cổ phiếu */
+.info h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.info small {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.info p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* Giá cổ phiếu */
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  width: 80%;
+  transition: transform 0.2s ease;
+}
+
+.price:hover {
+  transform: scale(1.05);
+}
+
+.positive {
+  color: #27ae60;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
+.negative {
+  color: #3cc2e7;
+  background: linear-gradient(135deg, #ffebee, #ffcdd2);
+}
+
+/* Khu vực hành động */
+.actions {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Nút Favorite */
+.favorite-action {
+  margin-bottom: 10px;
+}
+
+.favorite-action button,
+.other-actions button {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(0, 123, 255);
+  background: linear-gradient(135deg, white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-action button:hover,
+.other-actions button:hover {
+  background: linear-gradient(135deg, white);
+  transform: scale(1.05);
+}
+
+.favorite-action button:active,
+.other-actions button:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+.favorite-action button:disabled {
+  background: #bbb;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Nhóm nút hành động */
+.other-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.other-actions button {
+  flex: 1;
+}
+
+/* FORM EDIT CSS */
+.stock-edit-form {
+  width: 320px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border: 1px solid #ddd;
+}
+
+.stock-edit-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Nhóm label + input */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fafafa;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #65e3ff;
+  box-shadow: 0 0 8px rgba(255, 101, 132, 0.3);
+  outline: none;
+}
+
+/* Nhóm nút trong form */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #4CAF50, #43A047);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.button-group button:hover {
+  background: linear-gradient(135deg, #43A047, #388E3C);
+  transform: scale(1.05);
+}
+
+.button-group button:active {
+  transform: scale(0.95);
+}
+
+.button-group button.cancel {
+  background: linear-gradient(135deg, #3ce7de, #c0392b);
+}
+
+.button-group button.cancel:hover {
+  background: linear-gradient(135deg, #2b93c0, #a93226);
+}

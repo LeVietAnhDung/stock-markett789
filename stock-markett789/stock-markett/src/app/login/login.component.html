@@ -1,0 +1,36 @@
+<h2>Đăng nhập</h2>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="username">Username:</label>
+    <input
+      type="text"
+      id="username"
+      [(ngModel)]="username"
+      name="username"
+      required
+      #usernameInput="ngModel"
+    />
+    <div *ngIf="usernameInput.invalid && usernameInput.touched">
+      <small class="error">Vui lòng nhập tên tài khoản!</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      [(ngModel)]="password"
+      name="password"
+      required
+      #passwordInput="ngModel"
+    />
+    <div *ngIf="passwordInput.invalid && passwordInput.touched">
+      <small class="error">Vui lòng nhập mật khẩu!</small>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!username || !password">Đăng nhập</button>
+</form>
+
+<p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>

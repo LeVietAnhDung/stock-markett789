@@ -1,0 +1,101 @@
+h2 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 10px;
+  text-align: left; /* Căn trái */
+}
+
+/* Căn chỉnh toàn bộ form về bên trái */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Căn trái */
+  max-width: 350px; /* Giới hạn chiều rộng */
+  margin-left: 0; /* Đảm bảo không bị căn giữa */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Căn trái */
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 3px;
+  font-size: 0.9rem;
+}
+
+input, select {
+  padding: 5px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 250px;
+}
+
+/* Căn checkbox sát trái */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 0; /* Đảm bảo không bị lệch */
+}
+
+/* Giảm kích thước checkbox */
+.checkbox-group input {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+}
+
+/* Căn chữ label gần checkbox hơn */
+.checkbox-group label {
+  font-size: 0.9rem;
+  margin-left: 5px; /* Giảm khoảng cách thừa */
+}
+
+/* Căn trái nút Create */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 180px;
+  text-align: left; /* Căn chữ bên trái trong nút */
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Căn danh sách về bên trái */
+.stock-list {
+  list-style: none;
+  padding: 0;
+  max-width: 450px;
+  margin: 0; /* Xóa căn giữa */
+}
+
+.stock-item {
+  font-family: monospace;
+  white-space: pre-wrap;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin: 8px 0;
+  background: #f9f9f9;
+  text-align: left; /* Căn trái nội dung */
+}

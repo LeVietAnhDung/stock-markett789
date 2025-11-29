@@ -1,0 +1,66 @@
+<!-- View Mode -->
+<div class="stock-item" *ngIf="!isEditing">
+  <div class="info">
+    <h3>{{ stock.name }} <small>({{ stock.code }})</small></h3>
+    <p>Sàn: {{ stock.exchange }}</p>
+  </div>
+
+  <div class="price" [ngClass]="stock.isPositiveChange() ? 'positive' : 'negative'">
+    $ {{ stock.price }}
+  </div>
+
+  <div class="actions">
+    <div class="favorite-action">
+      <button (click)="toggleFavorite($event)" [disabled]="stock.favorite">
+        {{ stock.favorite ? 'Favorited' : 'Add to Favorite' }}
+      </button>
+    </div>
+    <div class="other-actions">
+      <button (click)="onEdit()">Edit</button>
+      <button (click)="onDelete()">Delete</button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Edit Mode -->
+  <div class="stock-edit-form" *ngIf="isEditing">
+    <form (ngSubmit)="saveEdit()">
+      <h3>Edit Stock</h3>
+
+      <div class="form-group">
+        <label for="name">Tên cổ phiếu:</label>
+        <input type="text" [(ngModel)]="editForm.name" name="name" id="name"
+               title="Nhập tên cổ phiếu" placeholder="VD: Vinamilk" />
+      </div>
+
+      <div class="form-group">
+        <label for="code">Mã cổ phiếu:</label>
+        <input type="text" [(ngModel)]="editForm.code" name="code" id="code"
+               title="Nhập mã cổ phiếu" placeholder="VD: VNM" />
+      </div>
+
+      <div class="form-group">
+        <label for="price">Giá:</label>
+        <input type="number" [(ngModel)]="editForm.price" name="price" id="price"
+               title="Nhập giá cổ phiếu" placeholder="VD: 100000" />
+      </div>
+
+      <div class="form-group">
+        <label for="exchange">Sàn giao dịch:</label>
+        <select [(ngModel)]="editForm.exchange" name="exchange" id="exchange"
+                title="Chọn sàn giao dịch">
+          <option value="HOSE">HOSE</option>
+          <option value="HNX">HNX</option>
+          <option value="UPCOM">UPCOM</option>
+        </select>
+      </div>
+
+
+
+      <div class="actions">
+        <button type="submit">Save</button>
+        <button type="button" (click)="cancelEdit()">Cancel</button>
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column; /* Chuyển sang bố cục dọc */
+  align-items: center; /* Căn giữa nội dung */
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Danh sách stock */
+.stock-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Mỗi stock item */
+.stock-item {
+  width: 280px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stock-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Form tạo mới cổ phiếu */
+.create-stock {
+  width: 100%;
+  max-width: 600px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  order: 1; /* Đưa create-stock xuống dưới */
+}
+
+
+/* Tiêu đề form */
+.create-stock h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Input và select */
+.create-stock input,
+.create-stock select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  transition: border 0.3s ease;
+}
+
+.create-stock input:focus,
+.create-stock select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Nút tạo stock */
+.create-stock button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.create-stock button:hover {
+  background: linear-gradient(135deg, #388E3C, #1B5E20);
+  transform: scale(1.05);
+}
+
+.create-stock button:active {
+  transform: scale(0.95);
+}

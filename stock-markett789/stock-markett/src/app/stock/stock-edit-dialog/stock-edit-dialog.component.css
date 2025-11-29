@@ -1,0 +1,118 @@
+/* 📌 Container chính của dialog (giữ nguyên kích thước) */
+.dialog-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 16px; /* Bo tròn khung */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid #28a745; /* Viền xanh lá */
+}
+
+/* 📌 Tiêu đề */
+.dialog-container h2 {
+  text-align: center;
+  font-size: 22px;
+  color: #28a745;
+  font-weight: bold;
+  border-bottom: 2px solid #28a745;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px; /* Bo tròn viền tiêu đề */
+}
+
+/* 📌 Nhóm nhập liệu */
+.form-group {
+  margin-bottom: 14px;
+  border-radius: 10px; /* Bo tròn từng nhóm */
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+/* 📌 Nhãn của input */
+.form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* 📌 Input & Select */
+.form-control {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 2px solid #ccc;
+  border-radius: 10px; /* Bo tròn input */
+  transition: all 0.3s;
+}
+
+/* 📌 Hiệu ứng khi focus vào input */
+.form-control:focus {
+  border-color: #28a745;
+  outline: none;
+  box-shadow: 0px 0px 6px rgba(40, 167, 69, 0.4);
+}
+
+/* 📌 Input readonly */
+.form-control[readonly] {
+  background: #f8f9fa;
+  color: #6c757d;
+  border-radius: 10px; /* Bo tròn input readonly */
+}
+
+/* 📌 Lỗi */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+  border-radius: 6px; /* Bo tròn lỗi */
+  padding: 5px;
+}
+
+/* 📌 Khu vực nút bấm */
+.dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  border-radius: 10px; /* Bo tròn khu vực nút */
+  padding: 10px;
+}
+
+/* 📌 Nút bấm */
+.btn {
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 12px; /* Bo tròn nút */
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+/* 📌 Nút hủy */
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background: #545b62;
+}
+
+/* 📌 Nút lưu */
+.btn-primary {
+  background: #28a745;
+  color: white;
+  border: none;
+}
+
+.btn-primary:disabled {
+  background: #c8e6c9;
+  cursor: not-allowed;
+}
+
+.btn-primary:hover {
+  background: #218838;
+}

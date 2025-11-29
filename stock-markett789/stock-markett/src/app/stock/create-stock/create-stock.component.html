@@ -1,0 +1,66 @@
+<h2>Create Stock Form</h2>
+
+<label>The following element changes from green to red when it is invalid</label>
+<div>
+    <input
+      type="text"
+      [(ngModel)]="stock.name"
+      (input)="validateName()"
+      [ngStyle]="{'background-color': isNameValid ? 'lightgreen' : 'lightpink'}"
+      placeholder="Tên cổ phiếu" />
+  </div>
+
+
+<label>The following element changes from green to red when it has been modified</label>
+<div>
+  <input
+    type="text"
+    [(ngModel)]="stock.code"
+    (input)="handleCodeChange()"
+    [ngStyle]="{'background-color': isCodeEdited ? 'lightpink' : 'lightgreen'}"
+    placeholder="Mã chứng khoán" />
+</div>
+
+
+<label>The following element changes from green to red when it is visited by the user, regardless of change</label>
+<div>
+  <input
+    type="number"
+    [(ngModel)]="stock.price"
+    (blur)="handlePriceBlur()"
+    [ngStyle]="{'background-color': isPriceTouched ? 'lightpink' : 'lightgreen'}"
+    placeholder="Giá cổ phiếu" />
+</div>
+
+
+<div>
+  <label for="exchange">Exchange:</label>
+  <select id="exchange" [(ngModel)]="stock.exchange">
+    <option value="NASDAQ">NASDAQ</option>
+    <option value="NYSE">NYSE</option>
+    <option value="HSX">HSX</option>
+  </select>
+</div>
+
+
+
+<div class="checkbox-group">
+  <input type="checkbox" [(ngModel)]="confirmed" id="confirm-checkbox" />
+  <label for="confirm-checkbox">I confirm that the information provided above is accurate!</label>
+</div>
+
+
+
+<button (click)="createStock()" [disabled]="!confirmed">Create</button>
+
+<h3>Stock List</h3>
+<ul class="stock-list">
+  <li *ngFor="let s of stockList" class="stock-item">
+    <div>Stock Name is {{ s | json }}</div>
+  </li>
+</ul>
+
+<div>
+    <strong>Data has been confirmed:</strong> {{ confirmed }}
+  </div>
+

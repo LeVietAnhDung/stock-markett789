@@ -1,0 +1,24 @@
+
+<div class="container">
+
+  <div class="create-stock">
+
+    <app-create-stock-2 (stockCreated)="addStock($event)"></app-create-stock-2>
+  </div>
+
+
+  <div class="stock-search">
+    <app-stock-search (searchKeyword)="onSearch($event)"></app-stock-search>
+  </div>
+
+
+  <div class="stock-list">
+    <div *ngFor="let stock of stocks">
+      <app-stock-item
+        [stock]="stock"
+        (delete)="deleteStock($event)"
+        (edit)="editStock($event)">
+      </app-stock-item>
+    </div>
+  </div>
+</div>

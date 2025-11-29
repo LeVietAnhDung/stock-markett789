@@ -1,0 +1,36 @@
+<h3>Create Stock Form</h3>
+
+<form [formGroup]="stockForm" (ngSubmit)="submitStock()">
+  <div>
+    <label for="name">Name</label>
+    <input id="name" type="text" formControlName="name" />
+    <div *ngIf="stockForm.get('name')?.invalid && stockForm.get('name')?.touched">
+      Name không để trống.
+    </div>
+  </div>
+
+  <div>
+    <label for="code">Code</label>
+    <input id="code" type="text" formControlName="code" />
+    <div *ngIf="stockForm.get('code')?.invalid && stockForm.get('code')?.touched">
+      Code phải có ít nhất 3 kí tự.
+    </div>
+  </div>
+
+  <div>
+    <label for="price">Stock Price</label>
+    <input id="price" type="number" formControlName="price" />
+    <div *ngIf="stockForm.get('price')?.invalid && stockForm.get('price')?.touched">
+      Giá cổ phiếu phải lớn hơn 0.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="stockForm.invalid">Submit</button>
+</form>
+
+<button (click)="loadStockServer()">Load Stock</button>
+<button (click)="patchStockForm()">Patch Price</button>
+
+<p>Form Control value: {{ stockForm.value | json }}</p>
+<p>Form Control status: "{{ stockForm.status }}"</p>
+

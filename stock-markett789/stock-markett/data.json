@@ -1,0 +1,71 @@
+{
+  "stocks": [
+    {
+      "id": "1235",
+      "name": "Test Stock Company",
+      "code": "TSC",
+      "price": 70,
+      "exchange": "HOSE"
+    },
+    {
+      "id": "f48a",
+      "name": "Google",
+      "code": "GOOGL",
+      "price": 300,
+      "exchange": "UPCOM"
+    },
+    {
+      "id": "741a",
+      "name": "Apple",
+      "code": "AAPL",
+      "price": 150,
+      "previousPrice": 150,
+      "exchange": "HNX",
+      "favorite": false
+    },
+    {
+      "id": "c3ff",
+      "name": "Samsung",
+      "code": "SASG",
+      "price": 168,
+      "previousPrice": 168,
+      "exchange": "UPCOM",
+      "favorite": false
+    },
+    {
+      "id": "2265",
+      "name": "Kuro",
+      "code": "OURK",
+      "price": 650,
+      "previousPrice": 650,
+      "exchange": "HOSE",
+      "favorite": false
+    },
+    {
+      "id": "b0ee",
+      "name": "Microsoft",
+      "code": "MSFT",
+      "price": 310,
+      "previousPrice": 310,
+      "exchange": "HNX",
+      "favorite": false
+    },
+    {
+      "id": "fe46",
+      "name": "Last Stock Company",
+      "code": "LSC",
+      "price": 876,
+      "previousPrice": 765,
+      "exchange": "NYSE",
+      "favorite": false
+    }
+  ],
+  "users": [
+    {
+      "id": "f320",
+      "username": "DUNG",
+      "email": "dungleviet2008@gmail.com",
+      "password": "1234"
+    }
+  ]
+}
